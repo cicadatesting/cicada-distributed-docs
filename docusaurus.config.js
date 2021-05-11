@@ -43,7 +43,7 @@ module.exports = {
           items: [
             {
               label: 'Installation',
-              to: '/introduction/installation',
+              to: '/docs/introduction/installation',
             },
           ],
         },
