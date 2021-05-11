@@ -3,7 +3,7 @@ module.exports = {
   title: 'Cicada Distributed',
   tagline: 'The Easiest and Most Painless Way to Test Your Site',
   url: 'https://www.google.com', // TODO: Replace
-  baseUrl: '/',
+  baseUrl: '/cicada-distributed/', // NOTE: may need to change if domain changes
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/cicada-logo-2.svg',
