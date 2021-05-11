@@ -23,7 +23,7 @@ function HomepageHeader() {
               <div className="col" style={{padding: "1em"}}>
                 <a
                   className="button button--lg button--primary shadow--tl"
-                  href="docs/introduction/installation"
+                  href="/docs/introduction/installation"
                 >
                   Get Started
                 </a>
@@ -31,7 +31,7 @@ function HomepageHeader() {
             </div>
           </div>
           <div className="col col--5 col--offset-1">
-            <img src="../../static/img/splash-terminal.svg"></img>
+            <img src="/img/splash-terminal.svg"></img>
           </div>
         </div>
       </div>
