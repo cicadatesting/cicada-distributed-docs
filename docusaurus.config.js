@@ -75,6 +75,11 @@ module.exports = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Cicada Testing. Built with Docusaurus.`,
+    },
+    googleAnalytics: {
+      trackingID: 'G-XDZLM3RYKH',
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
     }
   },
   presets: [
