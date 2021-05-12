@@ -9,6 +9,7 @@ module.exports = {
   favicon: 'img/cicada-logo-2.svg',
   organizationName: 'cicadatesting',
   projectName: 'cicada-distributed',
+  plugins: ['@docusaurus/plugin-google-analytics'],
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
@@ -75,6 +76,11 @@ module.exports = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Cicada Testing. Built with Docusaurus.`,
+    },
+    googleAnalytics: {
+      trackingID: 'UA-164919423-2',
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
     }
   },
   presets: [
