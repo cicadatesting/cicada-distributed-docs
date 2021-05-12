@@ -9,7 +9,6 @@ module.exports = {
   favicon: 'img/cicada-logo-2.svg',
   organizationName: 'cicadatesting',
   projectName: 'cicada-distributed',
-  plugins: ['@docusaurus/plugin-google-analytics'],
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
