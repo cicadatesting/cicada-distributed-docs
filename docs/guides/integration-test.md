@@ -10,7 +10,13 @@ a simple API.
 
 ## Creating the App
 
-<!-- TODO: git clone demos -->
+First, clone the app from `cicada-distributed-demos` and navigate to the `rest-api`
+
+```bash
+git clone https://github.com/cicadatesting/cicada-distributed-demos.git
+cd rest-api
+```
+
 <!-- FEATURE: may be useful to have a deployed version of the sample app -->
 
 In `app.py`, you'll notice the code for 2 endpoints:

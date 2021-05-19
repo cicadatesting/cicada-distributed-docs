@@ -21,7 +21,7 @@ def hello_world():
     assert 2 + 2 == 4
 ```
 
-<!--TODO: link to github code view instead of copy paste-->
+<!--FEATURE: link to github code view instead of copy paste-->
 
 #### API
 
