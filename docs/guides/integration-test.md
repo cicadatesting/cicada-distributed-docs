@@ -64,11 +64,11 @@ To test this, we'll want to verify 4 things:
 
 To begin, create an integration test script:
 
-````bash
+```bash
 mkdir integration-tests
 cd integration-tests
 cicada-distributed init .
-```Loads
+```
 
 Before we start, we should update the `Dockerfile` to include the `requests`
 package so we can make HTTP requests to the API
@@ -81,7 +81,7 @@ RUN pip install requests
 COPY . .
 
 ENTRYPOINT ["python", "-u", "test.py"]
-````
+```
 
 ### Post User
 
