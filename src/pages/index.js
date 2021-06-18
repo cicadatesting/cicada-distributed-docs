@@ -7,7 +7,7 @@ import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
@@ -18,12 +18,12 @@ function HomepageHeader() {
                 <h1 className="hero__title">{siteConfig.tagline}</h1>
               </div>
             </div>
-            <br/>
+            <br />
             <div className="row">
-              <div className="col" style={{padding: "1em"}}>
+              <div className="col" style={{ padding: "1em" }}>
                 <a
                   className="button button--lg button--primary shadow--tl"
-                  href="/cicada-distributed/docs/introduction/installation"
+                  href="/cicada-distributed-docs/docs/introduction/installation"
                 >
                   Get Started
                 </a>
@@ -31,7 +31,7 @@ function HomepageHeader() {
             </div>
           </div>
           <div className="col col--5 col--offset-1">
-            <img src="/cicada-distributed/img/splash-terminal.svg"></img>
+            <img src="/cicada-distributed-docs/img/splash-terminal.svg"></img>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
