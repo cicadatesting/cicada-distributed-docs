@@ -64,7 +64,6 @@ def n_seconds(
     seconds: int,
     users: int,
     wait_period: int = 1,
-    max_results_per_period: int = 1000,
     skip_scaledown=False,
 ):
     """Run the scenario for a specified duration. Should be used with the
@@ -74,7 +73,6 @@ def n_seconds(
         seconds (int): Number of seconds to run scenario
         users (int): Number of users to start for scenario
         wait_period (int, optional): Time in seconds to wait before polling for results. Defaults to 1.
-        max_results_per_period (int, optional): Max results to fetch at one time. Defaults to 1000.
         skip_scaledown (bool): Skip scaledown of users after running load function
     """
 ```
@@ -92,7 +90,6 @@ def n_users_ramping(
     seconds: int,
     target_users: int,
     wait_period: int = 1,
-    max_results_per_period: int = 1000,
     skip_scaledown: bool = True,
 ):
     """Scale users to target over the duration of the time specified. Use this
@@ -102,7 +99,6 @@ def n_users_ramping(
         seconds (int): Amount of time to spend ramping users
         target_users (int): Number of users to ramp to.
         wait_period (int, optional): Time in seconds to wait between scaling batch of users. Defaults to 1.
-        max_results_per_period (int, optional): Max number of results to return when polling. Defaults to 1000.
         skip_scaledown (bool, optional): Do not scale down users after load model completes. Defaults to True.
     """
 ```
@@ -124,7 +120,6 @@ def ramp_users_to_threshold(
     period_duration: int = 30,
     period_limit: Optional[int] = None,
     wait_period: int = 1,
-    max_results_per_period: int = 1000,
     skip_scaledown: bool = False,
 ):
     """Increase number of users in scenario until a threshold based on the
@@ -139,7 +134,6 @@ def ramp_users_to_threshold(
         period_duration (int, optional): Time in seconds to wait before scaling test. Defaults to 30.
         period_limit (Optional[int], optional): Amount of scaling events before stopping stage. Defaults to None.
         wait_period (int, optional): Time in seconds to wait before polling for results. Defaults to 1.
-        max_results_per_period (int, optional): Max results to fetch at one time. Defaults to 1000.
         skip_scaledown (bool): Skip scaledown of users after running load function
     """
 ```

@@ -71,11 +71,18 @@ cicada-distributed start-cluster
 
 This will start the following containers:
 
-* Manager - Used to start and stop user and scenario containers
-* Kafka - Used to communicate between Cicada containers and cache results
-* Zookeeper - Backend for Kafka
+* Redis - Used as a storage backend
+* Datastore Service - Client to connect with storage backend
+* Container Service - Starts and stops users and scenarios
 
 Run a `docker ps` to ensure those containers are running
+
+```bash
+CONTAINER ID   IMAGE                                                       COMMAND                  CREATED       STATUS       PORTS                                       NAMES
+c3f361bb4f39   cicadatesting/cicada-distributed-container-service:latest   "/app/main"              4 hours ago   Up 4 hours   0.0.0.0:8284->8284/tcp, :::8284->8284/tcp   cicada-distributed-container-service
+c1e17422ecb8   cicadatesting/cicada-distributed-datastore-client:latest    "/app/main"              4 hours ago   Up 4 hours   0.0.0.0:8283->8283/tcp, :::8283->8283/tcp   cicada-distributed-datastore-client
+bcd38f7eaaf3   redis:6                                                     "docker-entrypoint.s…"   4 hours ago   Up 4 hours   0.0.0.0:6379->6379/tcp, :::6379->6379/tcp   cicada-distributed-redis
+```
 
 ## Running tests
 
