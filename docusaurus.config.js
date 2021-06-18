@@ -3,12 +3,12 @@ module.exports = {
   title: 'Cicada Distributed',
   tagline: 'The Easiest and Most Painless Way to Test Your Site',
   url: 'https://www.google.com', // TODO: Replace
-  baseUrl: '/cicada-distributed/', // NOTE: may need to change if domain changes
+  baseUrl: '/cicada-distributed-docs/', // NOTE: may need to change if domain changes
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/cicada-logo-2.svg',
   organizationName: 'cicadatesting',
-  projectName: 'cicada-distributed',
+  projectName: 'cicada-distributed-docs',
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
