@@ -1,0 +1,1 @@
+(self.webpackChunkcicada_distributed_docs=self.webpackChunkcicada_distributed_docs||[]).push([[816],{6353:function(e){"use strict";e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hello","permalink":"/cicada-distributed-docs/blog/hello-world"}]}')}}]);
