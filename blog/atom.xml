@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://www.google.com/blog</id>
+    <id>https://www.google.com/cicada-distributed-docs/blog</id>
     <title>Cicada Distributed Blog</title>
-    <updated>2019-05-29T00:00:00.000Z</updated>
+    <updated>2021-05-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://www.google.com/blog"/>
+    <link rel="alternate" href="https://www.google.com/cicada-distributed-docs/blog"/>
     <subtitle>Cicada Distributed Blog</subtitle>
-    <icon>https://www.google.com/img/cicada-logo-2.svg</icon>
+    <icon>https://www.google.com/cicada-distributed-docs/img/cicada-logo-2.svg</icon>
     <entry>
-        <title type="html"><![CDATA[Hello]]></title>
-        <id>hello-world</id>
-        <link href="https://www.google.com/cicada-distributed-docs/blog/hello-world"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Welcome to this blog. This blog is created with Docusaurus 2 alpha.]]></summary>
+        <title type="html"><![CDATA[Creating the Cicada Distributed Framework]]></title>
+        <id>initial-release</id>
+        <link href="https://www.google.com/cicada-distributed-docs/blog/initial-release"/>
+        <updated>2021-05-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Read Cicada Distributed: Major Improvements! on Medium.]]></summary>
     </entry>
 </feed>

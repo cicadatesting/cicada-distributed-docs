@@ -2,17 +2,17 @@
 <rss version="2.0">
     <channel>
         <title>Cicada Distributed Blog</title>
-        <link>https://www.google.com/blog</link>
+        <link>https://www.google.com/cicada-distributed-docs/blog</link>
         <description>Cicada Distributed Blog</description>
-        <lastBuildDate>Wed, 29 May 2019 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 May 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Hello]]></title>
-            <link>https://www.google.com/cicada-distributed-docs/blog/hello-world</link>
-            <guid>hello-world</guid>
-            <pubDate>Wed, 29 May 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[Welcome to this blog. This blog is created with Docusaurus 2 alpha.]]></description>
+            <title><![CDATA[Creating the Cicada Distributed Framework]]></title>
+            <link>https://www.google.com/cicada-distributed-docs/blog/initial-release</link>
+            <guid>initial-release</guid>
+            <pubDate>Mon, 24 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Read Cicada Distributed: Major Improvements! on Medium.]]></description>
         </item>
     </channel>
 </rss>

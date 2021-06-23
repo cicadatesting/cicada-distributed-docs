@@ -1,0 +1,1 @@
+(self.webpackChunkcicada_distributed_docs=self.webpackChunkcicada_distributed_docs||[]).push([[535],{6353:function(e){"use strict";e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Creating the Cicada Distributed Framework","permalink":"/cicada-distributed-docs/blog/initial-release"}]}')}}]);
