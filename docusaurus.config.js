@@ -27,7 +27,7 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        // {to: '/blog', label: 'Blog', position: 'left'}, // TODO: links to medium articles
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/cicadatesting/cicada-distributed',
           label: 'GitHub',
@@ -90,13 +90,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/cicadatesting/cicada-distributed-docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/cicadatesting/cicada-distributed-docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
