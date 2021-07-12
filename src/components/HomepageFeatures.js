@@ -20,7 +20,7 @@ const FeatureList = [
       <>
         Cicada was designed to test distributed systems that weren't just API's.
         You can add any Python library of your choice to take advantage of
-        Cicada's robust and clean interface for managing virtual
+        Cicada's robust and clean interface for managing virtual users.
       </>
     ),
   },
@@ -50,15 +50,15 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_container_ship.svg').default,
     description: (
       <>
-        Cicada is designed to be easy to run locally or across many nodes
-        (coming soon) by packaging it inside of containers. This allows tests to
-        virtualize users without any funky threading mechanics so it just works.
+        Cicada is designed to be easy to run locally or across many nodes by
+        packaging it inside of containers. This allows tests to virtualize users
+        without any funky threading mechanics so it just works.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col')}>
       <div className="text--center">

@@ -14,7 +14,7 @@ First, clone the app from `cicada-distributed-demos` and navigate to the `rest-a
 
 ```bash
 git clone https://github.com/cicadatesting/cicada-distributed-demos.git
-cd rest-api
+cd rest-api/app
 ```
 
 <!-- FEATURE: may be useful to have a deployed version of the sample app -->
