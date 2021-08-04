@@ -51,8 +51,8 @@ const FeatureList = [
     description: (
       <>
         Cicada is designed to be easy to run locally or across many nodes by
-        packaging it inside of containers. This allows tests to virtualize users
-        without any funky threading mechanics so it just works.
+        packaging it inside of containers. This allows tests to go from your
+        machine to the Cloud with ease.
       </>
     ),
   },

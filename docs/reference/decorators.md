@@ -63,6 +63,34 @@ def user_loop(user_loop_fn: UserLoopFn):
     """
 ```
 
+## Users Per Container
+
+Sets number of users that can fit inside a single user container. Allows more
+users to run with fewer resources.
+
+#### Example
+
+```python
+from cicadad.core.decorators import scenario, users_per_container
+...
+
+@scenario(engine)
+@users_per_container(200)
+def hello_world():
+    assert 2 + 2 == 4
+```
+
+#### API
+
+```python
+def users_per_container(users_per_container: int):
+    """Sets how many users can fit inside a single user manager container.
+    Default is 50 users per container
+    Args:
+        users_per_container (int): Number of users to fit in a single container
+    """
+```
+
 ## Load Model
 
 Override the load model function for a scenario.

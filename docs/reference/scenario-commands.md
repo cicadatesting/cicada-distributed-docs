@@ -4,7 +4,40 @@ title: ScenarioCommands
 ---
 
 ScenarioCommands is a class available to load models in order to interact with
-the users during a scenario. These methods are available in ScenarioCommands:
+the users during a scenario.
+
+```python
+from datetime import datetime, timedelta
+import time
+
+from cicadad.core.engine import Engine
+from cicadad.core.decorators import (
+    scenario,
+    load_model,
+    ScenarioCommands
+)
+
+engine = Engine()
+
+def custom_load_model(scenario_commands: ScenarioCommands, context: dict):
+    scenario_commands.scale_users(50)
+
+    start_time = datetime.now()
+
+    while datetime.now() < start_time + timedelta(seconds=30):
+        latest_results = scenario_commands.get_latest_results()
+
+        scenario_commands.aggregate_results(latest_results)
+        scenario_commands.verify_results(latest_results)
+        time.sleep(1)
+
+    scenario_commands.scale_users(0)
+
+@scenario(engine)
+@load_model(custom_load_model)
+def an_example_test(context):
+    do_something()
+```
 
 ## Scale Users
 
@@ -55,6 +88,20 @@ scenario_commands.add_work(self, n: int):
 
     Args:
         n (int): Amount of work to distribute across user pool
+    """
+```
+
+## Send User Events
+
+Sends an event to all users currently running in scenario
+
+```python
+scenario_commands.send_user_events(self, kind: str, payload: dict):
+    """Send an event to all user in the user pool.
+
+    Args:
+        kind (str): Type of event
+        payload (dict): JSON dict to send to user
     """
 ```
 
