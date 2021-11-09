@@ -26,12 +26,13 @@ def hello_world():
 #### API
 
 ```python
-def scenario(engine: Engine, name: str = None):
+def scenario(engine: Engine, name: str = None, raise_exception: bool = True):
     """Mark a function as a scenario
 
     Args:
         engine (Engine): Engine to attach scenario to
         name (str, optional): Name to give to scenario. Defaults to function name if None.
+        raise_exception (bool): Raise exception if user loop fails.
     """
 ```
 
@@ -271,6 +272,81 @@ def output_transformer(transformer_fn: OutputTransformerFn):
 
     Args:
         transformer_fn (OutputTransformerFn): Transformer function
+    """
+```
+
+## Metrics Collector
+
+Adds function to scenario to parse latest results and send metrics
+
+#### Example
+
+```python
+from datetime import datetime
+from cicadad.core.decorators import scenario, metrics_collector, console_metric_displays
+from cicadad.metrics.console import (
+    console_collector,
+    console_count,
+    console_latest,
+    console_stats,
+)
+...
+
+
+def extract_ms(latest_results):
+    return [
+        float(result.output) for result in latest_results if result.exception is None
+    ]
+
+
+@scenario(engine)
+@metrics_collector(console_collector("stats", extract_ms))
+@metrics_collector(console_collector("latest", extract_ms))
+@metrics_collector(console_collector("count", extract_ms))
+@console_metric_displays(
+    {
+        "stats": console_stats(),
+        "latest": console_latest(),
+        "count": console_count(),
+    }
+)
+def hello_world():
+    start = datetime.now()
+
+    assert 2 + 2 == 4
+
+    end = datetime.now()
+
+    return (end - start).total_seconds()
+```
+
+#### API
+
+```python
+def metrics_collector(collector: MetricCollector):
+    """Add a collector function to parse and send metrics from scenario.
+
+    Args:
+        collector (MetricCollector): Collector function
+    """
+```
+
+## Console Metric Displays
+
+Display metric in the live metrics sidebar during a test.
+
+#### Example
+
+See example in [Metrics Collector](#metrics-collector).
+
+#### API
+
+```python
+def console_metric_displays(displays: ConsoleMetricDisplays):
+    """Sets map of names to metric displays for scenario.
+
+    Args:
+        displays (ConsoleMetricDisplays): Map of names to console metric display getters
     """
 ```
 
