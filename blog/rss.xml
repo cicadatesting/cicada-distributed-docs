@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Cicada Distributed Blog</title>
         <link>https://www.google.com/cicada-distributed-docs/blog</link>
@@ -13,6 +13,7 @@
             <guid>initial-release</guid>
             <pubDate>Mon, 24 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Read Cicada Distributed: Major Improvements! on Medium.]]></description>
+            <content:encoded><![CDATA[<p>Read Cicada Distributed: Major Improvements! on <a href="https://medium.com/geekculture/cicada-distributed-major-improvements-27c9ddd092b9">Medium</a>.</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
