@@ -4,45 +4,13 @@ id: first-test
 title: Writing Your First Test
 ---
 
-## Creating a project
+## Creating a test
 
-The easiest way to create a Cicada project is through the CLI.
+To create a test, create a Python file called
+[`test.py`](https://github.com/cicadatesting/cicada-distributed-demos/blob/main/first-test/test.py)
+(it can be named anything though). Enter these contents:
 
-```bash
-cicada-distributed init .
-```
-
-This will create a basic `Dockerfile` and a `test.py` file in the current
-directory.
-
-## Project Overview
-
-* `Dockerfile` - This is used by Cicada to add tests to an image and specify
-the entrypoint for tests.
-* `test.py` - This file is boilerplate for writing tests and linking them to an
-`Engine`. This file is also executed as the entrypoint for tests.
-
-## Adding a test
-
-In `test.py`, you'll find a basic test that checks that 2 + 2 is equal to 4.
-Let's change it so it does something more interesting.
-
-First, update the `Dockerfile` so it installs the `requests` library:
-
-```Dockerfile {3}
-FROM cicadatesting/cicada-distributed-base-image:latest
-
-RUN pip install requests
-
-COPY . .
-
-ENTRYPOINT ["python", "-u", "test.py"]
-```
-
-Next, update `test.py` so it makes a call to the Google homepage and checks the
-status code:
-
-```python {3,10-12}
+```python
 from cicadad.core.decorators import scenario
 from cicadad.core.engine import Engine
 import requests
@@ -61,21 +29,8 @@ if __name__ == "__main__":
     engine.start()
 ```
 
-## Starting the cluster
-
-Before anything runs, ensure that the cluster has been started on your machine:
-
-```bash
-cicada-distributed start-cluster
-```
-
-This will start the following containers:
-
-* Redis - Used as a storage backend
-* Datastore Service - Client to connect with storage backend
-* Container Service - Starts and stops users and scenarios
-
-Run a `docker ps` to ensure those containers are running
+This will create a test that visits the Google homepage and checks for a `200`
+response code.
 
 ```bash
 CONTAINER ID   IMAGE                                                       COMMAND                  CREATED       STATUS       PORTS                                       NAMES
@@ -86,22 +41,42 @@ bcd38f7eaaf3   redis:6                                                     "dock
 
 ## Running tests
 
-Finally, it's time to run our tests! In the current directory, run:
+Next, you can run your test locally via the command line. In the directory
+containing the test, run:
 
 ```bash
 cicada-distributed run
 ```
 
-This will package the tests into the `Dockerfile` and build the image. It will
-then start a test container to run the scenarios attached to the `Engine` and
-stream back the results.
-
-Viola! The test should complete successfully.
-
-## Stopping the cluster
-
-To clean up the cluster, simply run:
+This will start a local backend (assuming you have downloaded it with the
+`start-cluster` command) and launch test processes on your machine. Once the
+test completes, you should an output like this in your console:
 
 ```bash
-cicada-distributed stop-cluster
+========================= Test Complete =========================
+
+Passed:
+
+* my_first_test
+
+====================== 1 passed, 0 failed =======================
+
+--------------------- my_first_test: Passed ---------------------
+
+Time Taken: 2.018773 Seconds
+Succeeded: 1 Loop(s)
+Failed: 0 Loop(s)
+Metrics:
+                      my_first_test metrics
+ ───────────────────────────────────────────────────────────────
+  name                 value
+ ───────────────────────────────────────────────────────────────
+  runtimes             Min: 0.118, Median: 0.118, Average:
+                       0.118, Max: 0.118, Len: 1
+  results_per_second
+  success_rate         100.0
+ ───────────────────────────────────────────────────────────────
 ```
+
+This will show you that the test passed in 2 seconds, with the runtime of the
+user taking approximately 118 ms.

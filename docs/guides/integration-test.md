@@ -94,7 +94,7 @@ import requests
 @scenario(engine)
 def post_user(context):
     response = requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://localhost:8080/users",
         json={
             "name": "jeremy",
             "age": 23,
@@ -110,10 +110,9 @@ random email address.
 
 :::caution
 
-The host for the URL in this request is `172.17.0.1`. This is the internal
-Docker host for Linux. Your host may be different (like `host.docker.internal`).
-Make sure to change this if it applies to you or run the Cicada containers in
-the same network as the API containers. You can override the network with
+If running this in Docker, it may be applicable to hit localhost through Docker
+(like `172.17.0.1` or `host.docker.internal`), or hit the API through the docker
+network (the demo uses `demo-api`). You can override the network with
 the flag `cicada-distribtued run --network {network}`.
 
 :::
@@ -133,7 +132,7 @@ def post_user(context):
     email = f"{str(uuid.uuid4())[:8]}@gmail.com"
 
     response = requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://localhost:8080/users",
         json={
             "name": "jeremy",
             "age": 23,
@@ -149,7 +148,7 @@ def post_user(context):
 @dependency(post_user)
 def post_user_duplicate_email(context):
     response = requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://localhost:8080/users",
         json={
             "name": "jeremy",
             "age": 23,
@@ -175,7 +174,7 @@ def post_user(context):
     email = f"{str(uuid.uuid4())[:8]}@gmail.com"
 
     response = requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://localhost:8080/users",
         json={
             "name": "jeremy",
             "age": 23,
@@ -196,7 +195,7 @@ def post_user(context):
 @dependency(post_user)
 def post_user_duplicate_email(context):
     response = requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://localhost:8080/users",
         json={
             "name": "jeremy",
             "age": 23,
@@ -211,7 +210,7 @@ def post_user_duplicate_email(context):
 @dependency(post_user)
 def get_user(context):
     response = requests.get(
-        url=f"http://172.17.0.1:8080/users/{context['post_user']['output']['id']}",
+        url=f"http://localhost:8080/users/{context['post_user']['output']['id']}",
     )
 
     assert response.status_code == 200
@@ -226,7 +225,7 @@ fail. Create a test that will use `0` as the ID for the GET users endpoint:
 @scenario(engine)
 def get_user_not_found(context):
     response = requests.get(
-        url="http://172.17.0.1:8080/users/0",
+        url="http://localhost:8080/users/0",
     )
 
     assert response.status_code == 404

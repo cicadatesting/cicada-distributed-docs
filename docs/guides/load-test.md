@@ -6,8 +6,9 @@ sidebar_position: 2
 
 Cicada is a powerful tool for running load tests. It works by spinning up
 multiple `users` to run tests against your services in parallel. In this guide,
-we'll create a simple load test to simulate scaling load against the demo API in
-the [integration testing guide](integration-test#creating-the-app).
+we'll create [a simple load test](https://github.com/cicadatesting/cicada-distributed-demos/tree/main/rest-api/load-test)
+to simulate scaling load against the demo API in the
+[integration testing guide](integration-test#creating-the-app).
 
 ## Creating the Test
 
@@ -26,7 +27,7 @@ from cicadad.core.scenario import n_seconds, iterations_per_second_limited
 @user_loop(iterations_per_second_limited(4))
 def post_user(context):
     requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://localhost:8080/users",
         json={
             "name": "jeremy",
             "age": 23,
@@ -84,7 +85,7 @@ from cicadad.core.scenario import (
 @user_loop(iterations_per_second_limited(4))
 def post_user(context):
     requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://localhost:8080/users",
         json={
             "name": "jeremy",
             "age": 23,
