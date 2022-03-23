@@ -13,7 +13,9 @@
             <guid>initial-release</guid>
             <pubDate>Mon, 24 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Read Cicada Distributed: Major Improvements! on Medium.]]></description>
-            <content:encoded><![CDATA[<p>Read Cicada Distributed: Major Improvements! on <a href="https://medium.com/geekculture/cicada-distributed-major-improvements-27c9ddd092b9">Medium</a>.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Read Cicada Distributed: Major Improvements! on <a href="https://medium.com/geekculture/cicada-distributed-major-improvements-27c9ddd092b9" target="_blank" rel="noopener noreferrer">Medium</a>.</p>]]></content:encoded>
+            <category>initial</category>
+            <category>release</category>
         </item>
     </channel>
 </rss>
