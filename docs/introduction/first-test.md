@@ -32,6 +32,13 @@ if __name__ == "__main__":
 This will create a test that visits the Google homepage and checks for a `200`
 response code.
 
+```bash
+CONTAINER ID   IMAGE                                                       COMMAND                  CREATED       STATUS       PORTS                                       NAMES
+c3f361bb4f39   cicadatesting/cicada-distributed-container-service:latest   "/app/main"              4 hours ago   Up 4 hours   0.0.0.0:8284->8284/tcp, :::8284->8284/tcp   cicada-distributed-container-service
+c1e17422ecb8   cicadatesting/cicada-distributed-datastore-client:latest    "/app/main"              4 hours ago   Up 4 hours   0.0.0.0:8283->8283/tcp, :::8283->8283/tcp   cicada-distributed-datastore-client
+bcd38f7eaaf3   redis:6                                                     "docker-entrypoint.s…"   4 hours ago   Up 4 hours   0.0.0.0:6379->6379/tcp, :::6379->6379/tcp   cicada-distributed-redis
+```
+
 ## Running tests
 
 Next, you can run your test locally via the command line. In the directory

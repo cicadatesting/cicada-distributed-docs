@@ -113,13 +113,11 @@ Gathers results from users.
 scenario_commands.get_latest_results(
     self,
     timeout_ms=1000,
-    max_results=500,
 ):
     """Gathers results produced by users
 
     Args:
         timeout_ms (int, optional): Time to wait for results. Defaults to 1000.
-        max_results (int, optional): Max amount of results to return. Defaults to 500.
 
     Returns:
         List[Result]: List of latest results collected

@@ -31,9 +31,7 @@ def run_once(scenario_commands: ScenarioCommands, context: dict):
     latest_results = []
 
     while latest_results == []:
-        latest_results = scenario_commands.get_latest_results(
-            max_results=1
-        )
+        latest_results = scenario_commands.get_latest_results()
 
         time.sleep(1)
 
@@ -57,9 +55,7 @@ def n_iterations(iterations: int, users: int):
         results = []
 
         while len(results) < iterations:
-            latest_results = scenario_commands.get_latest_results(
-                max_results=iterations
-            )
+            latest_results = scenario_commands.get_latest_results()
 
             scenario_commands.aggregate_results(latest_results)
             scenario_commands.verify_results(latest_results)
