@@ -5,9 +5,9 @@ sidebar_position: 3
 ---
 
 Cicada's ultimate goal is to answer this question: At what point does my system
-break. In this tutorial, we'll discover how to use Cicada's powerful scaling
-features to push the [demo API](integration-test#creating-the-app) to it's
-limit.
+break. In [this tutorial](https://github.com/cicadatesting/cicada-distributed-demos/tree/main/rest-api/stress-test),
+we'll discover how to use Cicada's powerful scaling features to push the
+[demo API](integration-test#creating-the-app) to it's limit.
 
 ## Creating the Test
 
@@ -67,7 +67,7 @@ def post_user(context):
     start = datetime.now()
 
     requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://demo-api:8080/users",
         json={
             "name": "jeremy",
             "age": 23,
@@ -114,7 +114,7 @@ def post_user(context):
     start = datetime.now()
 
     requests.post(
-        url="http://172.17.0.1:8080/users",
+        url="http://demo-api:8080/users",
         json={
             "name": "jeremy",
             "age": 23,

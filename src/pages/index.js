@@ -31,7 +31,7 @@ function HomepageHeader() {
             </div>
           </div>
           <div className="col col--5 col--offset-1">
-            <img src="/cicada-distributed-docs/img/splash-terminal.svg"></img>
+            <img src="/cicada-distributed-docs/cicada-demo.gif"></img>
           </div>
         </div>
       </div>
