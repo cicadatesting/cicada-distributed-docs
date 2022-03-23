@@ -76,11 +76,6 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Cicada Testing. Built with Docusaurus.`,
     },
-    googleAnalytics: {
-      trackingID: 'UA-164919423-2',
-      // Optional fields.
-      anonymizeIP: true, // Should IPs be anonymized?
-    }
   },
   presets: [
     [
@@ -101,6 +96,11 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        googleAnalytics: {
+          trackingID: 'UA-164919423-2',
+          // Optional fields.
+          anonymizeIP: true, // Should IPs be anonymized?
+        }
       },
     ],
   ],
