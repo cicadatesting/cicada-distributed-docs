@@ -19,6 +19,7 @@ module.exports = {
       logo: {
         alt: 'Cicada Distributed Logo',
         src: 'img/cicada-logo-2.svg',
+        href: 'https://cicada-cloud.webflow.io'
       },
       items: [
         {
@@ -27,7 +28,7 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: 'https://api.cicadatesting.io/dashboard/configs', label: 'Dashboard', position: 'left' },
         {
           href: 'https://github.com/cicadatesting/cicada-distributed',
           label: 'GitHub',
