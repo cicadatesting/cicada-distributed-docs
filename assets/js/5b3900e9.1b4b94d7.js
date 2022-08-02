@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcicada_distributed_docs=self.webpackChunkcicada_distributed_docs||[]).push([[809],{6062:a=>{a.exports=JSON.parse('[{"label":"initial","permalink":"/cicada-distributed-docs/blog/tags/initial","count":1},{"label":"release","permalink":"/cicada-distributed-docs/blog/tags/release","count":1}]')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcicada_distributed_docs=self.webpackChunkcicada_distributed_docs||[]).push([[601],{9916:function(s){s.exports=JSON.parse('{"allTagsPath":"/cicada-distributed-docs/blog/tags","slug":"/cicada-distributed-docs/blog/tags/release","name":"release","count":1,"permalink":"/cicada-distributed-docs/blog/tags/release"}')}}]);
